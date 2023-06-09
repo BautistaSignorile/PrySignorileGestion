@@ -31,8 +31,7 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtDetalleActividad = new System.Windows.Forms.TextBox();
             this.lblTipoActividad = new System.Windows.Forms.Label();
-            this.dpt = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cboTipoActividad = new System.Windows.Forms.ComboBox();
             this.lblDetalleActividad = new System.Windows.Forms.Label();
             this.mrcReunion = new System.Windows.Forms.GroupBox();
@@ -45,7 +44,6 @@
             this.chkRepositor = new System.Windows.Forms.CheckBox();
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.mrcReunion.SuspendLayout();
             this.mrcTareas.SuspendLayout();
             this.SuspendLayout();
@@ -61,49 +59,42 @@
             // 
             // txtDetalleActividad
             // 
-            this.txtDetalleActividad.Location = new System.Drawing.Point(107, 97);
+            this.txtDetalleActividad.Location = new System.Drawing.Point(15, 131);
+            this.txtDetalleActividad.Multiline = true;
             this.txtDetalleActividad.Name = "txtDetalleActividad";
-            this.txtDetalleActividad.Size = new System.Drawing.Size(100, 20);
+            this.txtDetalleActividad.Size = new System.Drawing.Size(235, 112);
             this.txtDetalleActividad.TabIndex = 1;
             // 
             // lblTipoActividad
             // 
             this.lblTipoActividad.AutoSize = true;
-            this.lblTipoActividad.Location = new System.Drawing.Point(12, 57);
+            this.lblTipoActividad.Location = new System.Drawing.Point(9, 58);
             this.lblTipoActividad.Name = "lblTipoActividad";
             this.lblTipoActividad.Size = new System.Drawing.Size(75, 13);
             this.lblTipoActividad.TabIndex = 2;
             this.lblTipoActividad.Text = "Tipo Actividad";
             // 
-            // dpt
+            // dtpFecha
             // 
-            this.dpt.Location = new System.Drawing.Point(59, 9);
-            this.dpt.Name = "dpt";
-            this.dpt.Size = new System.Drawing.Size(200, 20);
-            this.dpt.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 415);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(423, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Relevamient, propuesta, diagnostico, analisis, diagrama de base de datos, program" +
-    "acion";
+            this.dtpFecha.Location = new System.Drawing.Point(15, 31);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(235, 20);
+            this.dtpFecha.TabIndex = 3;
             // 
             // cboTipoActividad
             // 
             this.cboTipoActividad.FormattingEnabled = true;
-            this.cboTipoActividad.Location = new System.Drawing.Point(89, 54);
+            this.cboTipoActividad.Items.AddRange(new object[] {
+            "asdasdd"});
+            this.cboTipoActividad.Location = new System.Drawing.Point(15, 74);
             this.cboTipoActividad.Name = "cboTipoActividad";
-            this.cboTipoActividad.Size = new System.Drawing.Size(121, 21);
+            this.cboTipoActividad.Size = new System.Drawing.Size(235, 21);
             this.cboTipoActividad.TabIndex = 5;
             // 
             // lblDetalleActividad
             // 
             this.lblDetalleActividad.AutoSize = true;
-            this.lblDetalleActividad.Location = new System.Drawing.Point(15, 104);
+            this.lblDetalleActividad.Location = new System.Drawing.Point(12, 115);
             this.lblDetalleActividad.Name = "lblDetalleActividad";
             this.lblDetalleActividad.Size = new System.Drawing.Size(86, 13);
             this.lblDetalleActividad.TabIndex = 6;
@@ -113,9 +104,9 @@
             // 
             this.mrcReunion.Controls.Add(this.rdbNo);
             this.mrcReunion.Controls.Add(this.rdbSi);
-            this.mrcReunion.Location = new System.Drawing.Point(18, 139);
+            this.mrcReunion.Location = new System.Drawing.Point(15, 252);
             this.mrcReunion.Name = "mrcReunion";
-            this.mrcReunion.Size = new System.Drawing.Size(200, 100);
+            this.mrcReunion.Size = new System.Drawing.Size(235, 58);
             this.mrcReunion.TabIndex = 7;
             this.mrcReunion.TabStop = false;
             this.mrcReunion.Text = "Reunion";
@@ -123,7 +114,7 @@
             // rdbNo
             // 
             this.rdbNo.AutoSize = true;
-            this.rdbNo.Location = new System.Drawing.Point(41, 62);
+            this.rdbNo.Location = new System.Drawing.Point(141, 19);
             this.rdbNo.Name = "rdbNo";
             this.rdbNo.Size = new System.Drawing.Size(39, 17);
             this.rdbNo.TabIndex = 1;
@@ -134,7 +125,7 @@
             // rdbSi
             // 
             this.rdbSi.AutoSize = true;
-            this.rdbSi.Location = new System.Drawing.Point(41, 29);
+            this.rdbSi.Location = new System.Drawing.Point(65, 19);
             this.rdbSi.Name = "rdbSi";
             this.rdbSi.Size = new System.Drawing.Size(34, 17);
             this.rdbSi.TabIndex = 0;
@@ -148,9 +139,9 @@
             this.mrcTareas.Controls.Add(this.chkNotasReunion);
             this.mrcTareas.Controls.Add(this.chkInvestigacion);
             this.mrcTareas.Controls.Add(this.chkRepositor);
-            this.mrcTareas.Location = new System.Drawing.Point(18, 246);
+            this.mrcTareas.Location = new System.Drawing.Point(15, 316);
             this.mrcTareas.Name = "mrcTareas";
-            this.mrcTareas.Size = new System.Drawing.Size(317, 100);
+            this.mrcTareas.Size = new System.Drawing.Size(241, 100);
             this.mrcTareas.TabIndex = 8;
             this.mrcTareas.TabStop = false;
             this.mrcTareas.Text = "Tareas";
@@ -197,50 +188,44 @@
             // 
             // cmdRegistrar
             // 
-            this.cmdRegistrar.Location = new System.Drawing.Point(332, 377);
+            this.cmdRegistrar.Location = new System.Drawing.Point(96, 437);
             this.cmdRegistrar.Name = "cmdRegistrar";
             this.cmdRegistrar.Size = new System.Drawing.Size(75, 23);
             this.cmdRegistrar.TabIndex = 9;
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
+            this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
             // 
             // cmdCancelar
             // 
-            this.cmdCancelar.Location = new System.Drawing.Point(251, 377);
+            this.cmdCancelar.Location = new System.Drawing.Point(15, 437);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(75, 23);
             this.cmdCancelar.TabIndex = 10;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 437);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Grabar la seleccion en variables";
-            // 
             // frmRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(262, 471);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.mrcTareas);
             this.Controls.Add(this.mrcReunion);
             this.Controls.Add(this.lblDetalleActividad);
             this.Controls.Add(this.cboTipoActividad);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dpt);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblTipoActividad);
             this.Controls.Add(this.txtDetalleActividad);
             this.Controls.Add(this.lblFecha);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRegistrar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistrar";
+            this.Click += new System.EventHandler(this.frmRegistrar_Click);
             this.mrcReunion.ResumeLayout(false);
             this.mrcReunion.PerformLayout();
             this.mrcTareas.ResumeLayout(false);
@@ -255,8 +240,7 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.TextBox txtDetalleActividad;
         private System.Windows.Forms.Label lblTipoActividad;
-        private System.Windows.Forms.DateTimePicker dpt;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.ComboBox cboTipoActividad;
         private System.Windows.Forms.Label lblDetalleActividad;
         private System.Windows.Forms.GroupBox mrcReunion;
@@ -269,6 +253,5 @@
         private System.Windows.Forms.CheckBox chkRepositor;
         private System.Windows.Forms.Button cmdRegistrar;
         private System.Windows.Forms.Button cmdCancelar;
-        private System.Windows.Forms.Label label5;
     }
 }

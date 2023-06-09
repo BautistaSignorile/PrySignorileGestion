@@ -16,5 +16,41 @@ namespace pryGestion
         {
             InitializeComponent();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdRegistrar_Click(object sender, EventArgs e)
+        {
+            if (dtpFecha.Value >= DateTime.Today)
+            {
+                if (cboTipoActividad.SelectedIndex != -1)
+                {
+                    if (txtDetalleActividad.Text != "")
+                    {
+                        MessageBox.Show("Vamos a grabar...");
+                        cboTipoActividad.Focus();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fecha actual o posterior a la de hoy", "Carga de Tarea", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpFecha.Value = DateTime.Today;
+                dtpFecha.Focus();
+            }
+        }
     }
 }
