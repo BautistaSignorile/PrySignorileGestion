@@ -17,6 +17,8 @@ namespace pryGestion
             InitializeComponent();
         }
 
+        string[] vectorActividad = new string[10];
+
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -50,6 +52,37 @@ namespace pryGestion
                 MessageBox.Show("Seleccione una fecha actual o posterior a la de hoy", "Carga de Tarea", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dtpFecha.Value = DateTime.Today;
                 dtpFecha.Focus();
+            }
+        }
+
+        private void frmRegistrar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            //vectorActividad[2] = "Programar";
+            //lstCargar.Items.Add(vectorActividad[2]);
+            int indice = 0;
+
+            while (indice <= 9)
+            {
+                lstCargar.Items.Add(vectorActividad[indice]);
+
+                indice++; 
+            }
+        }
+
+        private void btnCargarVector_Click(object sender, EventArgs e)
+        {
+           int indice = 0;
+
+            while (indice <= 9)
+            {
+                vectorActividad[indice] = "un dato" + indice;
+
+                indice = indice + 1;
             }
         }
     }

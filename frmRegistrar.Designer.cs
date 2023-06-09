@@ -44,6 +44,9 @@
             this.chkRepositor = new System.Windows.Forms.CheckBox();
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.lstCargar = new System.Windows.Forms.ListBox();
+            this.btnCargarVector = new System.Windows.Forms.Button();
             this.mrcReunion.SuspendLayout();
             this.mrcTareas.SuspendLayout();
             this.SuspendLayout();
@@ -205,11 +208,42 @@
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
             // 
+            // btnCargar
+            // 
+            this.btnCargar.Location = new System.Drawing.Point(352, 28);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.TabIndex = 11;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // lstCargar
+            // 
+            this.lstCargar.FormattingEnabled = true;
+            this.lstCargar.Location = new System.Drawing.Point(284, 115);
+            this.lstCargar.Name = "lstCargar";
+            this.lstCargar.Size = new System.Drawing.Size(199, 95);
+            this.lstCargar.TabIndex = 12;
+            // 
+            // btnCargarVector
+            // 
+            this.btnCargarVector.Location = new System.Drawing.Point(343, 74);
+            this.btnCargarVector.Name = "btnCargarVector";
+            this.btnCargarVector.Size = new System.Drawing.Size(95, 23);
+            this.btnCargarVector.TabIndex = 13;
+            this.btnCargarVector.Text = "Cargar Vector";
+            this.btnCargarVector.UseVisualStyleBackColor = true;
+            this.btnCargarVector.Click += new System.EventHandler(this.btnCargarVector_Click);
+            // 
             // frmRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 471);
+            this.ClientSize = new System.Drawing.Size(495, 471);
+            this.Controls.Add(this.btnCargarVector);
+            this.Controls.Add(this.lstCargar);
+            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.mrcTareas);
@@ -225,6 +259,7 @@
             this.Name = "frmRegistrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistrar";
+            this.Load += new System.EventHandler(this.frmRegistrar_Load);
             this.Click += new System.EventHandler(this.frmRegistrar_Click);
             this.mrcReunion.ResumeLayout(false);
             this.mrcReunion.PerformLayout();
@@ -253,5 +288,8 @@
         private System.Windows.Forms.CheckBox chkRepositor;
         private System.Windows.Forms.Button cmdRegistrar;
         private System.Windows.Forms.Button cmdCancelar;
+        private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.ListBox lstCargar;
+        private System.Windows.Forms.Button btnCargarVector;
     }
 }
