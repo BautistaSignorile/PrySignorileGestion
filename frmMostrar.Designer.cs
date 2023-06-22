@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMostrar));
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.btnIngresarActividad = new System.Windows.Forms.Button();
-            this.btnVerActividad = new System.Windows.Forms.Button();
+            this.btnvolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,21 +54,22 @@
             this.btnIngresarActividad.UseVisualStyleBackColor = true;
             this.btnIngresarActividad.Click += new System.EventHandler(this.btnIngresarActividad_Click);
             // 
-            // btnVerActividad
+            // btnvolver
             // 
-            this.btnVerActividad.Location = new System.Drawing.Point(12, 239);
-            this.btnVerActividad.Name = "btnVerActividad";
-            this.btnVerActividad.Size = new System.Drawing.Size(148, 52);
-            this.btnVerActividad.TabIndex = 2;
-            this.btnVerActividad.Text = "Ver Actividad";
-            this.btnVerActividad.UseVisualStyleBackColor = true;
+            this.btnvolver.Location = new System.Drawing.Point(12, 239);
+            this.btnvolver.Name = "btnvolver";
+            this.btnvolver.Size = new System.Drawing.Size(148, 52);
+            this.btnvolver.TabIndex = 2;
+            this.btnvolver.Text = "volver";
+            this.btnvolver.UseVisualStyleBackColor = true;
+            this.btnvolver.Click += new System.EventHandler(this.btnVerActividad_Click);
             // 
             // frmMostrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(172, 310);
-            this.Controls.Add(this.btnVerActividad);
+            this.Controls.Add(this.btnvolver);
             this.Controls.Add(this.btnIngresarActividad);
             this.Controls.Add(this.picLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -85,6 +86,6 @@
 
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button btnIngresarActividad;
-        private System.Windows.Forms.Button btnVerActividad;
+        private System.Windows.Forms.Button btnvolver;
     }
 }

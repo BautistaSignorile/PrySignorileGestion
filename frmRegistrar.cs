@@ -53,6 +53,13 @@ namespace pryGestion
                 dtpFecha.Value = DateTime.Today;
                 dtpFecha.Focus();
             }
+            int n = dtgvRegistro.Rows.Add();
+
+            dtgvRegistro.Rows[n].Cells[0].Value = dtpFecha.Text;
+            dtgvRegistro.Rows[n].Cells[1].Value = cboTipoActividad.Text;
+            dtgvRegistro.Rows[n].Cells[2].Value = txtDetalleActividad.Text;
+            dtgvRegistro.Rows[n].Cells[3].Value = mrcReunion.Text;
+            dtgvRegistro.Rows[n].Cells[4].Value = mrcTareas.Text;
         }
 
         private void cmdCancelar_Click(object sender, EventArgs e)
@@ -60,6 +67,16 @@ namespace pryGestion
             Form Cancelar = new frmMostrar();
             Cancelar.Show();
             this.Hide();
+        }
+
+        private void dtgvRegistro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

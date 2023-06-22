@@ -23,5 +23,12 @@ namespace pryGestion
             MostrarActividad.Show();
             this.Hide();
         }
+
+        private void btnVerActividad_Click(object sender, EventArgs e)
+        {
+          Form volver = new frmMain();
+          volver.Show();
+          this.Hide();
+        }
     }
 }

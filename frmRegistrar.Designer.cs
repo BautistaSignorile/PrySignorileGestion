@@ -45,8 +45,18 @@
             this.chkRepositor = new System.Windows.Forms.CheckBox();
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
+            this.dtgvRegistro = new System.Windows.Forms.DataGridView();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DetalleActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reunión = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tareas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.mrcReunion.SuspendLayout();
             this.mrcTareas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFecha
@@ -207,11 +217,83 @@
             this.cmdCancelar.UseVisualStyleBackColor = true;
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
+            // dtgvRegistro
+            // 
+            this.dtgvRegistro.AllowUserToAddRows = false;
+            this.dtgvRegistro.AllowUserToDeleteRows = false;
+            this.dtgvRegistro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvRegistro.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dtgvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvRegistro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Fecha,
+            this.TipoActividad,
+            this.DetalleActividad,
+            this.Reunión,
+            this.Tareas});
+            this.dtgvRegistro.Location = new System.Drawing.Point(269, 131);
+            this.dtgvRegistro.Name = "dtgvRegistro";
+            this.dtgvRegistro.RowHeadersVisible = false;
+            this.dtgvRegistro.Size = new System.Drawing.Size(509, 285);
+            this.dtgvRegistro.TabIndex = 11;
+            this.dtgvRegistro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvRegistro_CellContentClick);
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // TipoActividad
+            // 
+            this.TipoActividad.HeaderText = "Tipo Actividad";
+            this.TipoActividad.Name = "TipoActividad";
+            this.TipoActividad.ReadOnly = true;
+            // 
+            // DetalleActividad
+            // 
+            this.DetalleActividad.HeaderText = "Detalle Actividad";
+            this.DetalleActividad.Name = "DetalleActividad";
+            this.DetalleActividad.ReadOnly = true;
+            // 
+            // Reunión
+            // 
+            this.Reunión.HeaderText = "Reunión";
+            this.Reunión.Name = "Reunión";
+            this.Reunión.ReadOnly = true;
+            // 
+            // Tareas
+            // 
+            this.Tareas.HeaderText = "Tareas";
+            this.Tareas.Name = "Tareas";
+            this.Tareas.ReadOnly = true;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::pryGestion.Properties.Resources.pngwing_com__2_;
+            this.picLogo.Location = new System.Drawing.Point(439, 12);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(100, 105);
+            this.picLogo.TabIndex = 12;
+            this.picLogo.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(703, 437);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 13;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // frmRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 471);
+            this.ClientSize = new System.Drawing.Size(790, 471);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.picLogo);
+            this.Controls.Add(this.dtgvRegistro);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.mrcTareas);
@@ -233,6 +315,8 @@
             this.mrcReunion.PerformLayout();
             this.mrcTareas.ResumeLayout(false);
             this.mrcTareas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +340,13 @@
         private System.Windows.Forms.CheckBox chkRepositor;
         private System.Windows.Forms.Button cmdRegistrar;
         private System.Windows.Forms.Button cmdCancelar;
+        private System.Windows.Forms.DataGridView dtgvRegistro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DetalleActividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reunión;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tareas;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
