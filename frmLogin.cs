@@ -10,25 +10,33 @@ using System.Windows.Forms;
 
 namespace pryGestion
 {
-    public partial class frmMain : Form
+    public partial class frmLogin : Form
     {
-        public frmMain()
+        public frmLogin()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Por el momento no esta disponible esta opcion");
-            this.Close();
+            Form Cancelar = new frmMain();
+            Cancelar.Show();
+            this.Hide();
+        }
+
+        private void textBox2_VisibleChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form login = new frmLogin();
-            login.Show();
-            this.Hide();
-      
+            if (txtUsuario.Text == "admin" && txtContraseña.Text == "123")
+            {
+                Form Actividad = new frmMostrar();
+                Actividad.Show();
+                this.Hide();
+            }
         }
     }
 }

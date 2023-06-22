@@ -28,67 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbActividad = new System.Windows.Forms.ComboBox();
-            this.lblActividad = new System.Windows.Forms.Label();
-            this.lBox = new System.Windows.Forms.ListBox();
-            this.cmdVolver = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMostrar));
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnIngresarActividad = new System.Windows.Forms.Button();
+            this.btnVerActividad = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // cbActividad
+            // picLogo
             // 
-            this.cbActividad.FormattingEnabled = true;
-            this.cbActividad.Location = new System.Drawing.Point(123, 28);
-            this.cbActividad.Name = "cbActividad";
-            this.cbActividad.Size = new System.Drawing.Size(121, 21);
-            this.cbActividad.TabIndex = 0;
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(38, 8);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(102, 107);
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
-            // lblActividad
+            // btnIngresarActividad
             // 
-            this.lblActividad.AutoSize = true;
-            this.lblActividad.Location = new System.Drawing.Point(28, 28);
-            this.lblActividad.Name = "lblActividad";
-            this.lblActividad.Size = new System.Drawing.Size(50, 13);
-            this.lblActividad.TabIndex = 1;
-            this.lblActividad.Text = "actividad";
+            this.btnIngresarActividad.Location = new System.Drawing.Point(12, 153);
+            this.btnIngresarActividad.Name = "btnIngresarActividad";
+            this.btnIngresarActividad.Size = new System.Drawing.Size(148, 52);
+            this.btnIngresarActividad.TabIndex = 1;
+            this.btnIngresarActividad.Text = "Ingresar Actividad";
+            this.btnIngresarActividad.UseVisualStyleBackColor = true;
+            this.btnIngresarActividad.Click += new System.EventHandler(this.btnIngresarActividad_Click);
             // 
-            // lBox
+            // btnVerActividad
             // 
-            this.lBox.FormattingEnabled = true;
-            this.lBox.Location = new System.Drawing.Point(31, 73);
-            this.lBox.Name = "lBox";
-            this.lBox.Size = new System.Drawing.Size(325, 225);
-            this.lBox.TabIndex = 2;
-            // 
-            // cmdVolver
-            // 
-            this.cmdVolver.Location = new System.Drawing.Point(280, 331);
-            this.cmdVolver.Name = "cmdVolver";
-            this.cmdVolver.Size = new System.Drawing.Size(75, 23);
-            this.cmdVolver.TabIndex = 3;
-            this.cmdVolver.Text = "volver";
-            this.cmdVolver.UseVisualStyleBackColor = true;
+            this.btnVerActividad.Location = new System.Drawing.Point(12, 239);
+            this.btnVerActividad.Name = "btnVerActividad";
+            this.btnVerActividad.Size = new System.Drawing.Size(148, 52);
+            this.btnVerActividad.TabIndex = 2;
+            this.btnVerActividad.Text = "Ver Actividad";
+            this.btnVerActividad.UseVisualStyleBackColor = true;
             // 
             // frmMostrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cmdVolver);
-            this.Controls.Add(this.lBox);
-            this.Controls.Add(this.lblActividad);
-            this.Controls.Add(this.cbActividad);
+            this.ClientSize = new System.Drawing.Size(172, 310);
+            this.Controls.Add(this.btnVerActividad);
+            this.Controls.Add(this.btnIngresarActividad);
+            this.Controls.Add(this.picLogo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMostrar";
-            this.Text = "frmMostrar";
+            this.Text = "Actividad";
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbActividad;
-        private System.Windows.Forms.Label lblActividad;
-        private System.Windows.Forms.ListBox lBox;
-        private System.Windows.Forms.Button cmdVolver;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Button btnIngresarActividad;
+        private System.Windows.Forms.Button btnVerActividad;
     }
 }
