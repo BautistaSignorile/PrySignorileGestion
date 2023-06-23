@@ -94,9 +94,15 @@
             // 
             // cboTipoActividad
             // 
+            this.cboTipoActividad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoActividad.FormattingEnabled = true;
             this.cboTipoActividad.Items.AddRange(new object[] {
-            "asdasdd"});
+            "Relevamiento",
+            "Propuesta",
+            "Diagnostico",
+            "Analisis",
+            "Diagrama de base de datos",
+            "Programacion"});
             this.cboTipoActividad.Location = new System.Drawing.Point(15, 74);
             this.cboTipoActividad.Name = "cboTipoActividad";
             this.cboTipoActividad.Size = new System.Drawing.Size(235, 21);
@@ -129,13 +135,13 @@
             this.rdbNo.Name = "rdbNo";
             this.rdbNo.Size = new System.Drawing.Size(39, 17);
             this.rdbNo.TabIndex = 1;
-            this.rdbNo.TabStop = true;
             this.rdbNo.Text = "No";
             this.rdbNo.UseVisualStyleBackColor = true;
             // 
             // rdbSi
             // 
             this.rdbSi.AutoSize = true;
+            this.rdbSi.Checked = true;
             this.rdbSi.Location = new System.Drawing.Point(65, 19);
             this.rdbSi.Name = "rdbSi";
             this.rdbSi.Size = new System.Drawing.Size(34, 17);
@@ -223,6 +229,7 @@
             this.dtgvRegistro.AllowUserToDeleteRows = false;
             this.dtgvRegistro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvRegistro.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dtgvRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvRegistro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -233,7 +240,7 @@
             this.dtgvRegistro.Location = new System.Drawing.Point(269, 131);
             this.dtgvRegistro.Name = "dtgvRegistro";
             this.dtgvRegistro.RowHeadersVisible = false;
-            this.dtgvRegistro.Size = new System.Drawing.Size(509, 285);
+            this.dtgvRegistro.Size = new System.Drawing.Size(521, 285);
             this.dtgvRegistro.TabIndex = 11;
             this.dtgvRegistro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvRegistro_CellContentClick);
             // 
@@ -290,7 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 471);
+            this.ClientSize = new System.Drawing.Size(802, 471);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.dtgvRegistro);

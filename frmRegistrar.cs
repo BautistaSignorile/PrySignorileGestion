@@ -36,14 +36,49 @@ namespace pryGestion
 
         private void cmdRegistrar_Click(object sender, EventArgs e)
         {
+            string varTarea = "";
+            string varReunion = "";
             if (dtpFecha.Value >= DateTime.Today)
             {
                 if (cboTipoActividad.SelectedIndex != -1)
                 {
                     if (txtDetalleActividad.Text != "")
                     {
+                        if (rdbSi.Checked = true)
+                        {
+                            varReunion = "Si";
+                        }
+                        else
+                        {
+                            varReunion = "No";
+                        }
+                        if (chkDebate.Checked)
+                        {
+                            varTarea = "Debate, ";
+                        }
+                        if (chkInvestigacion.Checked)
+                        {
+                            varTarea = "Insvestigacion, ";
+                        }
+                        if (chkNotasReunion.Checked)
+                        {
+                            varTarea = "Notas, ";
+                        }
+                        if (chkRepositor.Checked)
+                        {
+                            varTarea = "Repositor. ";
+                        }
+
                         MessageBox.Show("Vamos a grabar...");
                         cboTipoActividad.Focus();
+
+                        int n = dtgvRegistro.Rows.Add();
+
+                        dtgvRegistro.Rows[n].Cells[0].Value = dtpFecha.Text;
+                        dtgvRegistro.Rows[n].Cells[1].Value = cboTipoActividad.Text;
+                        dtgvRegistro.Rows[n].Cells[2].Value = txtDetalleActividad.Text;
+                        dtgvRegistro.Rows[n].Cells[3].Value = varReunion;
+                        dtgvRegistro.Rows[n].Cells[4].Value = varTarea;
                     }
                 }
             }
@@ -53,6 +88,7 @@ namespace pryGestion
                 dtpFecha.Value = DateTime.Today;
                 dtpFecha.Focus();
             }
+
         }
 
         private void cmdCancelar_Click(object sender, EventArgs e)
